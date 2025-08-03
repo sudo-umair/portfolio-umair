@@ -25,7 +25,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand href='/' className='d-flex'>
           <span style={{ fontWeight: 'bold', fontSize: '1.75rem' }} className='purple'>
-            Mu.
+            MU
           </span>
         </Navbar.Brand>
         <Navbar.Toggle
