@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from './ProjectCards';
 import Particle from '../Particle';
+import portfolio from '../../Assets/Projects/portfolio.png';
 import frontlineGlobal from '../../Assets/Projects/frontline-global.png';
 import beyondPresence from '../../Assets/Projects/beyond-presence.png';
 import curevision from '../../Assets/Projects/curevision.png';
@@ -43,6 +44,17 @@ function Projects() {
               title='CureVision'
               description='AI-powered wound analysis mobile app built with React Native. Features include automatic wound detection, 3D analysis using AI/ML, one-click wound report generation, and medical documentation capabilities.'
               demoLink='https://curevision.de/en/'
+            />
+          </Col>
+
+          <Col md={4} className='project-card'>
+            <ProjectCard
+              imgPath={portfolio}
+              isBlog={false}
+              title='Portfolio Website'
+              description='Personal portfolio website built with React.js, featuring modern UI/UX design, responsive layout, and smooth animations. Includes sections for projects, about, resume, and contact information with particle effects and interactive components.'
+              demoLink='https://portfolio-umair-five.vercel.app/'
+              ghLink='https://github.com/sudo-umair/portfolio-umair'
             />
           </Col>
         </Row>
