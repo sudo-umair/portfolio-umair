@@ -11,7 +11,7 @@ function AboutCard() {
             Hi Everyone, I am <span className='purple'>Muhammad Umair </span>
             from <span className='purple'> Rawalpindi, Pakistan.</span>
             <br />
-            I am currently employed as a Mid-Senior Full Stack Engineer at Codejunkie Co., Ltd.
+            I am currently employed as a Full Stack Engineer at Codejunkie Co., Ltd.
             <br />
             I have completed Bachelor's in Software Engineering at NUML (National University of Modern Languages).
             <br />
@@ -22,18 +22,12 @@ function AboutCard() {
           </p>
           <ul>
             <li className='about-activity'>
-              <ImPointRight /> Building Mobile Apps
-            </li>
-            <li className='about-activity'>
               <ImPointRight /> Learning New Technologies
             </li>
             <li className='about-activity'>
-              <ImPointRight /> Contributing to Open Source
+              <ImPointRight /> Gaming
             </li>
           </ul>
-
-          <p style={{ color: 'rgb(155 126 172)' }}>"Be the change that you want to see in the world." </p>
-          <footer className='blockquote-footer'>Muhammad Umair</footer>
         </blockquote>
       </Card.Body>
     </Card>
