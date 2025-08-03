@@ -2,11 +2,11 @@
 
 A modern, responsive personal portfolio website built with React.js showcasing professional experience, projects, and skills.
 
-![Portfolio Preview](./Images/readme-img1.png)
+![Portfolio Preview](./Images/readme-img.png)
 
 ## ✨ Live Demo
 
-🌐 **Visit the live site:** [muhammadumair.dev](https://muhammadumair.dev/)
+🌐 **Visit the live site:** [portfolio-umair-five.vercel.app](https://portfolio-umair-five.vercel.app/)
 
 ## 🎯 Features
 
@@ -171,7 +171,7 @@ If you find this project helpful, please consider:
 
 ## 📞 Contact
 
-- **Website:** [muhammadumair.dev](https://portfolio-umair-five.vercel.app/)
+- **Website:** [portfolio-umair-five.vercel.app](https://portfolio-umair-five.vercel.app/)
 - **GitHub:** [@sudo-umair](https://github.com/sudo-umair)
 - **LinkedIn:** [Muhammad Umair](https://linkedin.com/in/sudo-umair)
 
