@@ -1,76 +1,184 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://muhammadumair.dev/" target="_blank">muhammadumair.dev</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
+# 🚀 Personal Portfolio Website
 
-<br/>
+A modern, responsive personal portfolio website built with React.js showcasing professional experience, projects, and skills.
 
-<center>
+![Portfolio Preview](./Images/readme-img1.png)
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/sudo-umair/portfolio-umair?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/sudo-umair/portfolio-umair?color=red&logo=github&style=for-the-badge)
+## ✨ Live Demo
 
-</center>
+🌐 **Visit the live site:** [muhammadumair.dev](https://muhammadumair.dev/)
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/sudo-umair/portfolio-umair/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/sudo-umair/portfolio-umair/issues">Request Feature</a>
-</h3>
+## 🎯 Features
 
-## TL;DR
+- **📱 Fully Responsive Design** - Optimized for all devices and screen sizes
+- **⚡ Modern React Architecture** - Built with React 17 and modern hooks
+- **🎨 Beautiful UI/UX** - Clean, professional design with smooth animations
+- **📄 Multi-Page Layout** - Home, About, Projects, and Resume sections
+- **🔧 Easy Customization** - Well-structured components for easy modifications
+- **📊 GitHub Integration** - GitHub calendar and project showcase
+- **🎭 Interactive Elements** - Particle effects, typewriter animations, and parallax effects
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [sudo-umair](https://github.com/sudo-umair/portfolio-umair). Thanks!
+## 🛠️ Tech Stack
 
-## Built With
+### Frontend
 
-My personal portfolio <a href="https://muhammadumair.dev/" target="_blank">muhammadumair.dev</a> which features some of my github projects as well as my resume and technical skills.<br/>
+- **React.js** - Modern UI library for building interactive interfaces
+- **React Router** - Client-side routing for single-page application
+- **React Bootstrap** - UI components built on Bootstrap
+- **CSS3** - Custom styling with modern CSS features
 
-This project was built using these technologies.
+### Libraries & Tools
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+- **React Icons** - Comprehensive icon library
+- **React Particles** - Interactive particle effects
+- **Typewriter Effect** - Animated text typing
+- **React PDF** - PDF rendering capabilities
+- **Axios** - HTTP client for API requests
 
-## Features
+### Development
 
-**📖 Multi-Page Layout**
+- **Node.js** - JavaScript runtime
+- **Create React App** - Development environment
+- **VS Code** - Code editor
+- **Vercel** - Deployment platform
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+## 🚀 Getting Started
 
-**📱 Fully Responsive**
+### Prerequisites
 
-## Getting Started
+Make sure you have the following installed on your machine:
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
 
-## 🛠 Installation and Setup Instructions
+### Installation
 
-1. Installation: `npm install`
+1. **Clone the repository**
 
-2. In the project directory, you can run: `npm start`
+   ```bash
+   git clone https://github.com/sudo-umair/portfolio-umair.git
+   cd portfolio-umair
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+2. **Install dependencies**
 
-## Usage Instructions
+   ```bash
+   npm install
+   ```
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+3. **Start the development server**
 
-### Show your support
+   ```bash
+   npm start
+   ```
 
-Give a ⭐ if you like this website!
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-<a href="https://www.buymeacoffee.com/sudo-umair" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+### Build for Production
+
+```bash
+npm run build
+```
+
+## 📁 Project Structure
+
+```
+portfolio-umair/
+├── public/                 # Static files
+├── src/
+│   ├── components/         # React components
+│   │   ├── About/          # About page components
+│   │   ├── Home/           # Home page components
+│   │   ├── Projects/       # Projects page components
+│   │   └── Resume/         # Resume page components
+│   ├── Assets/             # Images and static assets
+│   ├── constants/          # Configuration files
+│   └── App.js              # Main application component
+├── package.json            # Dependencies and scripts
+└── README.md               # Project documentation
+```
+
+## 🎨 Customization
+
+### Personal Information
+
+Navigate to `/src/components/` to modify your personal information:
+
+- **Home.js** - Update introduction and hero section
+- **About.js** - Modify about section content
+- **Projects.js** - Add or modify your projects
+- **Resume.js** - Update resume information
+
+### Styling
+
+- Main styles: `src/App.css` and `src/style.css`
+- Component-specific styles are included in each component
+- Bootstrap classes are used for responsive design
+
+### Colors and Themes
+
+The color scheme can be customized by modifying CSS variables in the style files.
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive and optimized for:
+
+- 📱 Mobile devices (320px+)
+- 📱 Tablets (768px+)
+- 💻 Desktop (1024px+)
+- 🖥️ Large screens (1200px+)
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect it's a React app
+3. Deploy with one click
+
+### Other Platforms
+
+- **Netlify** - Drag and drop the `build` folder
+- **GitHub Pages** - Use `gh-pages` package
+- **Firebase Hosting** - Use Firebase CLI
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### How to Contribute
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Support
+
+If you find this project helpful, please consider:
+
+- ⭐ Giving it a star on GitHub
+- 🐛 Reporting bugs
+- 💡 Suggesting new features
+- ☕ [Buy me a coffee](https://www.buymeacoffee.com/sudo-umair)
+
+## 📞 Contact
+
+- **Website:** [muhammadumair.dev](https://portfolio-umair-five.vercel.app/)
+- **GitHub:** [@sudo-umair](https://github.com/sudo-umair)
+- **LinkedIn:** [Muhammad Umair](https://linkedin.com/in/sudo-umair)
+
+---
+
+## 🙏 Acknowledgments
+
+**Original Author:** This project was originally created by [Soumyajit Behera](https://github.com/soumyajit4419). The original repository can be found at [soumyajit4419/Portfolio](https://github.com/soumyajit4419/Portfolio).
+
+This README has been rewritten from scratch while maintaining full credit to the original author and project creator.
