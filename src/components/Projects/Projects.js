@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from './ProjectCards';
 import Particle from '../Particle';
 import portfolio from '../../Assets/Projects/portfolio.png';
+import resume from '../../Assets/Projects/resume.png';
 import frontlineGlobal from '../../Assets/Projects/frontline-global.png';
 import beyondPresence from '../../Assets/Projects/beyond-presence.png';
 import curevision from '../../Assets/Projects/curevision.png';
@@ -55,6 +56,16 @@ function Projects() {
               description='Personal portfolio website built with React.js, featuring modern UI/UX design, responsive layout, and smooth animations. Includes sections for projects, about, resume, and contact information with particle effects and interactive components.'
               demoLink='https://portfolio-umair-five.vercel.app/'
               ghLink='https://github.com/sudo-umair/portfolio-umair'
+            />
+          </Col>
+
+          <Col md={4} className='project-card'>
+            <ProjectCard
+              imgPath={resume}
+              isBlog={false}
+              title='Professional CV/Resume'
+              description='Modern, professional CV/Resume built using LaTeX with the Awesome CV template. Features modular architecture, clean typography, Font Awesome integration, and a matching cover letter template. Optimized for both digital and print formats.'
+              ghLink='https://github.com/sudo-umair/cv-umair'
             />
           </Col>
         </Row>
