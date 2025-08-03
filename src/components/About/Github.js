@@ -1,6 +1,7 @@
 import React from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import { Row } from 'react-bootstrap';
+import { SOCIAL_LINKS } from '../../constants/socialLinks';
 
 function Github() {
   return (
@@ -8,7 +9,7 @@ function Github() {
       <h1 className='project-heading' style={{ paddingBottom: '20px' }}>
         Days I <strong className='purple'>Code</strong>
       </h1>
-      <GitHubCalendar username='sudo-umair' blockSize={15} blockMargin={5} color='#c084f5' fontSize={16} />
+      <GitHubCalendar username={SOCIAL_LINKS.GITHUB.username} blockSize={15} blockMargin={5} color='#c084f5' fontSize={16} />
     </Row>
   );
 }
