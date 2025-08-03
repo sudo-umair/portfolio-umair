@@ -58,13 +58,18 @@ function ResumeNew() {
                 disabled={currentPage <= 1}
                 style={{
                   marginRight: '15px',
-                  padding: '8px 16px',
+                  padding: '8px 12px',
                   position: 'relative',
                   zIndex: 1001,
+                  borderRadius: '50%',
+                  width: '40px',
+                  height: '40px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
                 <AiOutlineLeft />
-                &nbsp;Previous
               </Button>
 
               <span
@@ -85,12 +90,17 @@ function ResumeNew() {
                 disabled={currentPage >= numPages}
                 style={{
                   marginLeft: '15px',
-                  padding: '8px 16px',
+                  padding: '8px 12px',
                   position: 'relative',
                   zIndex: 1001,
+                  borderRadius: '50%',
+                  width: '40px',
+                  height: '40px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
-                Next&nbsp;
                 <AiOutlineRight />
               </Button>
             </Col>
