@@ -7,6 +7,7 @@ import resume from '../../Assets/Projects/resume.png';
 import frontlineGlobal from '../../Assets/Projects/frontline-global.png';
 import beyondPresence from '../../Assets/Projects/beyond-presence.png';
 import curevision from '../../Assets/Projects/curevision.png';
+import engageSwitch from '../../Assets/Projects/engage-switch.png';
 
 function Projects() {
   return (
@@ -45,6 +46,16 @@ function Projects() {
               title='CureVision'
               description='AI-powered wound analysis mobile app built with React Native. Features include automatic wound detection, 3D analysis using AI/ML, one-click wound report generation, and medical documentation capabilities.'
               demoLink='https://curevision.de/en/'
+            />
+          </Col>
+
+          <Col md={4} className='project-card'>
+            <ProjectCard
+              imgPath={engageSwitch}
+              isBlog={false}
+              title='Engage Switch'
+              description='B2B marketing tool that automates cold email outreach and lead engagement. Developed a responsive web platform with React.js, built email composition and campaign management interfaces, implemented interactive charts and dashboards for analytics, integrated REST APIs for campaign data and tracking, and optimized UI for performance across devices.'
+              demoLink='https://www.engageswitch.com/'
             />
           </Col>
 
