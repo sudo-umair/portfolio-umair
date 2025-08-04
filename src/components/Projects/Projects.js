@@ -11,19 +11,19 @@ import engageSwitch from '../../Assets/Projects/engage-switch.png';
 
 const projects = [
   {
-    imgPath: frontlineGlobal,
-    title: 'Frontline Global',
-    description:
-      'Full-stack web application for global staffing and recruitment. Built with React.js, Express.js, TypeScript, and Tailwind CSS. Features include user authentication, job posting, candidate management, and Stripe payment integration.',
-    demoLink: 'https://frontlineglobal.io/',
-    isBlog: false,
-  },
-  {
     imgPath: beyondPresence,
     title: 'Beyond Presence',
     description:
       'AI-powered virtual presence platform frontend. Built with React.js, TypeScript, and AI/ML integration. Features include real-time communication, LiveKit integration, WebSockets, and a reusable UI library with design system.',
     demoLink: 'https://www.beyondpresence.ai/',
+    isBlog: false,
+  },
+  {
+    imgPath: frontlineGlobal,
+    title: 'Frontline Global',
+    description:
+      'Full-stack travel assistance platform built with React.js and Node.js. Features real-time crisis response, emergency assistance, and membership-based travel support services for luxury and business travelers.',
+    demoLink: 'https://frontlineglobal.io/',
     isBlog: false,
   },
   {
