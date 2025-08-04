@@ -1,15 +1,7 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
+  --section-background-color: linear-gradient(to bottom left, rgba(17, 16, 16, 0.582), rgba(12, 8, 24, 0.904));
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
+  --image-gradient: linear-gradient(to bottom left, rgba(17, 16, 16, 0.678), rgba(12, 10, 22, 0.863));
 
   --imp-text-color: #c770f0;
 }
@@ -188,7 +180,7 @@ button:focus {
 }
 
 .navbar-nav .nav-item a::after {
-  content: "";
+  content: '';
   position: relative;
   display: block;
   height: 5px;
@@ -364,7 +356,7 @@ button:focus {
 }
 
 .home-social-icons::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -508,6 +500,9 @@ button:focus {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  width: 100% !important;
+  height: 240px !important;
+  object-fit: cover !important;
 }
 
 .blog-img {
@@ -674,7 +669,7 @@ button:focus {
 }
 
 .resume .resume-item::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
