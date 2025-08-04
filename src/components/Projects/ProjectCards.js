@@ -8,31 +8,35 @@ function ProjectCards(props) {
   return (
     <Card className='project-card-view'>
       <Card.Img variant='top' src={props.imgPath} alt='card-img' />
-      <Card.Body style={{ padding: '10px 15px' }}>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: 'justify', textJustify: 'inter-word', hyphens: 'auto' }}>
-          {props.description}
-        </Card.Text>
-        {/* GitHub button - only show if ghLink is provided */}
-        {props.ghLink && (
-          <Button variant='primary' href={props.ghLink} target='_blank'>
-            <BsGithub /> &nbsp;
-            {props.isBlog ? 'Blog' : 'GitHub'}
-          </Button>
-        )}
+      <Card.Body style={{ padding: '10px 15px', display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <div style={{ flex: '1' }}>
+          <Card.Title>{props.title}</Card.Title>
+          <Card.Text style={{ textAlign: 'justify', textJustify: 'inter-word', hyphens: 'auto' }}>
+            {props.description}
+          </Card.Text>
+        </div>
+        <div style={{ marginTop: 'auto', paddingTop: '15px' }}>
+          {/* GitHub button - only show if ghLink is provided */}
+          {props.ghLink && (
+            <Button variant='primary' href={props.ghLink} target='_blank'>
+              <BsGithub /> &nbsp;
+              {props.isBlog ? 'Blog' : 'GitHub'}
+            </Button>
+          )}
 
-        {/* Demo button - only show if demoLink is provided and not a blog */}
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant='primary'
-            href={props.demoLink}
-            target='_blank'
-            style={{ marginLeft: props.ghLink ? '10px' : '0px' }}
-          >
-            <CgWebsite /> &nbsp;
-            {'Demo'}
-          </Button>
-        )}
+          {/* Demo button - only show if demoLink is provided and not a blog */}
+          {!props.isBlog && props.demoLink && (
+            <Button
+              variant='primary'
+              href={props.demoLink}
+              target='_blank'
+              style={{ marginLeft: props.ghLink ? '10px' : '0px' }}
+            >
+              <CgWebsite /> &nbsp;
+              {'Demo'}
+            </Button>
+          )}
+        </div>
       </Card.Body>
     </Card>
   );
