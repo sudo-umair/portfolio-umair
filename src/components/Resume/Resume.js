@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Particle from '../Particle';
-import pdf from '../../Assets/Muhammad_Umair_Resume.pdf';
+import pdf from '../../assets/resume/Muhammad_Umair_Resume.pdf';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { Document, Page, pdfjs } from 'react-pdf';

@@ -2,12 +2,12 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from './ProjectCards';
 import Particle from '../Particle';
-import portfolio from '../../Assets/Projects/portfolio.png';
-import resume from '../../Assets/Projects/resume.png';
-import frontlineGlobal from '../../Assets/Projects/frontline-global.png';
-import beyondPresence from '../../Assets/Projects/beyond-presence.png';
-import curevision from '../../Assets/Projects/curevision.png';
-import engageSwitch from '../../Assets/Projects/engage-switch.png';
+import portfolio from '../../assets/projects/portfolio.png';
+import resume from '../../assets/projects/resume.png';
+import frontlineGlobal from '../../assets/projects/frontline-global.png';
+import beyondPresence from '../../assets/projects/beyond-presence.png';
+import curevision from '../../assets/projects/curevision.png';
+import engageSwitch from '../../assets/projects/engage-switch.png';
 
 const projects = [
   {

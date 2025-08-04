@@ -93,7 +93,7 @@ portfolio-umair/
 │   │   ├── Home/           # Home page components
 │   │   ├── Projects/       # Projects page components
 │   │   └── Resume/         # Resume page components
-│   ├── Assets/             # Images and static assets
+│   ├── assets/             # Images and static assets
 │   ├── constants/          # Configuration files
 │   └── App.js              # Main application component
 ├── package.json            # Dependencies and scripts
