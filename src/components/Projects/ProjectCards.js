@@ -8,7 +8,7 @@ function ProjectCards(props) {
   return (
     <Card className='project-card-view'>
       <Card.Img variant='top' src={props.imgPath} alt='card-img' />
-      <Card.Body>
+      <Card.Body style={{ padding: '10px 15px' }}>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: 'justify', textJustify: 'inter-word', hyphens: 'auto' }}>
           {props.description}
