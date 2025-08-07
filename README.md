@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website built with React.js showcasing professional experience, projects, and skills.
 
-![Portfolio Preview](./Images/readme-img.png)
+![Portfolio Preview](./Images/preview.png)
 
 ## ✨ Live Demo
 
