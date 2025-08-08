@@ -13,6 +13,10 @@ function Resume() {
   const [width, setWidth] = useState(1200);
   const [numPages, setNumPages] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [documentLoading, setDocumentLoading] = useState(true);
+  const [pageLoading, setPageLoading] = useState(true);
+  const [documentError, setDocumentError] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -20,14 +24,46 @@ function Resume() {
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
+    setDocumentLoading(false);
+    setDocumentError(false);
+    setLoadingProgress(100);
+  }
+
+  function onDocumentLoadError(error) {
+    console.error('Error loading PDF:', error);
+    setDocumentLoading(false);
+    setDocumentError(true);
+    setLoadingProgress(0);
+  }
+
+  function onDocumentLoadProgress({ loaded, total }) {
+    if (total > 0) {
+      const progress = Math.round((loaded / total) * 100);
+      setLoadingProgress(progress);
+    }
+  }
+
+  function onPageLoadSuccess() {
+    setPageLoading(false);
+  }
+
+  function onPageLoadError(error) {
+    console.error('Error loading page:', error);
+    setPageLoading(false);
   }
 
   const goToPrevPage = () => {
-    setCurrentPage(currentPage - 1 <= 1 ? 1 : currentPage - 1);
+    if (currentPage > 1) {
+      setPageLoading(true);
+      setCurrentPage(currentPage - 1);
+    }
   };
 
   const goToNextPage = () => {
-    setCurrentPage(currentPage + 1 >= numPages ? numPages : currentPage + 1);
+    if (currentPage < numPages) {
+      setPageLoading(true);
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   return (
@@ -35,10 +71,58 @@ function Resume() {
       <Container fluid className='resume-section'>
         <Particle />
 
-        <Row className='resume' style={{ marginBottom: '30px' }}>
-          <Document file={pdf} className='d-flex justify-content-center' onLoadSuccess={onDocumentLoadSuccess}>
-            <Page key={`page_${currentPage}`} pageNumber={currentPage} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+        <Row className='resume' style={{ marginBottom: '30px', justifyContent: 'center' }}>
+          <Col xs={12} className='d-flex justify-content-center'>
+            <div className='pdf-container'>
+              {documentLoading && (
+                <div className='pdf-loading-spinner'>
+                  <p style={{ color: 'white', fontSize: '16px' }}>Loading Resume... {loadingProgress}%</p>
+                  <div className='loading-progress-bar'>
+                    <div className='loading-progress-fill' style={{ width: `${loadingProgress}%` }}></div>
+                  </div>
+                </div>
+              )}
+
+              {documentError ? (
+                <div className='pdf-error-placeholder'>
+                  <span>Failed to load PDF. Please try refreshing the page.</span>
+                  <Button
+                    variant='outline-primary'
+                    onClick={() => window.location.reload()}
+                    style={{ marginTop: '15px' }}
+                  >
+                    Retry
+                  </Button>
+                </div>
+              ) : (
+                <Document
+                  file={pdf}
+                  className='d-flex justify-content-center'
+                  onLoadSuccess={onDocumentLoadSuccess}
+                  onLoadError={onDocumentLoadError}
+                  onLoadProgress={onDocumentLoadProgress}
+                  loading=''
+                >
+                  <div className='pdf-page-container'>
+                    {pageLoading && (
+                      <div className='page-loading-overlay'>
+                        <p style={{ color: 'white', fontSize: '14px', margin: 0 }}>Loading Page...</p>
+                      </div>
+                    )}
+                    <Page
+                      key={`page_${currentPage}`}
+                      pageNumber={currentPage}
+                      scale={width > 786 ? 1.7 : 0.6}
+                      onLoadSuccess={onPageLoadSuccess}
+                      onLoadError={onPageLoadError}
+                      loading=''
+                      className={pageLoading ? 'page-loading' : 'page-loaded'}
+                    />
+                  </div>
+                </Document>
+              )}
+            </div>
+          </Col>
         </Row>
 
         {numPages && (
