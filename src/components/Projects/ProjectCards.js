@@ -1,13 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { CgWebsite } from 'react-icons/cg';
 import { BsGithub } from 'react-icons/bs';
 
 function ProjectCards(props) {
+  const [imageLoading, setImageLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
+  const handleImageError = () => {
+    setImageLoading(false);
+    setImageError(true);
+  };
+
   return (
     <Card className='project-card-view'>
-      <Card.Img variant='top' src={props.imgPath} alt='card-img' />
+      <div className='project-image-container'>
+        {imageLoading && (
+          <div className='image-loading-spinner'>
+            <div className='spinner'></div>
+          </div>
+        )}
+        {imageError ? (
+          <div className='image-error-placeholder'>
+            <span>Image not available</span>
+          </div>
+        ) : (
+          <Card.Img
+            variant='top'
+            src={props.imgPath}
+            alt='card-img'
+            onLoad={handleImageLoad}
+            onError={handleImageError}
+            style={{ display: imageLoading ? 'none' : 'block' }}
+          />
+        )}
+      </div>
       <Card.Body style={{ padding: '10px 15px', display: 'flex', flexDirection: 'column', height: '100%' }}>
         <div style={{ flex: '1' }}>
           <Card.Title>{props.title}</Card.Title>
